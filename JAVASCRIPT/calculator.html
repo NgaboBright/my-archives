@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en,fren">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            background-color: #818181f5;
+        }
+
+        .calculator {
+            background-color: #a3dcff;
+            border-radius: 35px;
+            box-shadow: 0 2px 10px rgb(14, 71, 196);
+            padding: 30px;
+            width: 400px;
+        }
+
+        #display {
+            width: 90%;
+            height: 40px;
+            text-align: left;
+            font-size: 25px;
+            margin-bottom: 15px;
+            border: 10px solid #1315af;
+            border-radius: 30px;
+            padding: 10px;
+            color: aliceblue;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 3fr);
+            gap: 10px;
+            box-shadow: 0 2px 10px rgb(14, 71, 196);
+            padding: 20px;
+
+        }
+        
+        button {
+            padding: 25px;
+            font-size: 20px;
+            border: none;
+            border-radius: 30px;
+            background-color: #082c46;
+            color: rgba(249, 249, 249, 0.959);
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #020105ce;
+
+        }
+    </style>
+</head>
+<body>
+   <header><marquee scrollamount="3"><h1>simple calculator</h1></marquee>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="deleteLast()">DEL</button>
+            <button onclick="calculateResult()">=</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+               <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+         <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+              <button onclick="appendToDisplay('-')">-</button>
+          <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="appendToDisplay('0')">0</button>
+        </div>
+    </div><br><br>
+    <a href="bri's,scienty,cal.html">CLICK HERE TO USE<BR>SCIENTIFIC CALCULATOR</a>
+    <script>
+        function appendToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function deleteLast() {
+            var display = document.getElementById('display');
+            display.value = display.value.slice(0, -1);
+        }
+
+        function calculateResult() {
+            var display = document.getElementById('display');
+            try {
+                display.value = eval(display.value);
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>

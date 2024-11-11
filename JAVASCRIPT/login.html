@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('alan-walker-image.jpg');
+            background-size: 100%;
+            color: aquamarine;
+        }
+        .login-container {
+            background: rgb(1, 61, 80);
+            padding: 50px;
+            border-radius: 20px;
+            color: rgb(197, 217, 255);
+            box-shadow: 0 0 10px rgba(209, 205, 205, 0.1);
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #bdb7b7;
+            color: antiquewhite;
+            border-radius: 10px;
+            background-color: rgb(16, 10, 53);
+
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+<body>
+<header><p><h1><strong><i>javascript calculators</i></strong></h1></p>    
+<div class="login-container">
+    <h2>Login</h2>
+    
+    <form onsubmit="return validateLogin()">
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="enter your username" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="enter your password" name="password" required>
+        
+        <input type="submit" value="Login">
+        <input type="submit" value="SIGN UP">
+    </form>
+</div>
+<script>
+    function validateLogin() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        const defaultUsername = 'ngabo bright';
+        const defaultPassword = 'PASSWORD123';
+        if (username === defaultUsername && password === defaultPassword) {
+            alert('Login successful!');
+            window.location.href = 'calculator.html';
+            return false;
+        } else {
+            alert('Invalid username or password');
+       
+            return false; 
+        }
+    }
+</script>
+</body>
+</html>
