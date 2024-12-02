@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Evaluation</title>
+</head>
+<body>
+    <h1>Marks Evaluation</h1>
+    <div>
+        <label for="marksInput">Enter your marks:</label>
+        <input type="number" id="marksInput" placeholder="Enter marks" />
+        <button onclick="evaluateMarks()">Submit</button>
+    </div>
+    <p id="result"></p>
+
+    <script>
+        function evaluateMarks() {
+            const marks = parseFloat(document.getElementById("marksInput").value);
+
+            const resultElement = document.getElementById("result");
+            if (isNaN(marks)) {
+                resultElement.textContent = "Please enter a valid number.";
+                return;
+            }
+             
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #160d2e;
+        }
+        header {
+            background-color: #160d2e;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 0.5em 1em;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-color: #272749;
+            padding: 2em;
+            text-align: center;
+        }        
+        .hero h1 {
+            margin: 0;
+        }
+        .categories, .featured {
+            padding: 2em;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: #160d2e;
+        }
+        .categories div, .featured div {
+            border: 1px solid #000000;
+            padding: 1em;
+            margin: 1em;
+            flex: 1 1 calc(30% - 2em);
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #242350;
+            color: #fff;
+        }
+        footer {
+            background-color: #242350;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our E-Commerce(e-shop)</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Categories</a>
+        <a href="#">Dashboard</a>
+        <a href="#">Contact Us</a>
+        
+    </nav>
+    <section class="hero">
+
+        <h1>Find the Best Products Here!</h1>
+        <p>Shop top-selling items and discover great deals today.</p>
+
+        <button onclick="alert('Shop Now Clicked!')" style="background-color: rgb(27, 53, 27);">Shop Now</button>
+        <button onclick="alert('Start Selling Clicked!')" style="background-color: aqua;">Start Selling</button>
+    </section>
+    <section class="categories">
+        <section class="Search">
+            <form>
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </section><br>
+        <section>
+        <h2>Product Categories</h2>
+        <div>Electronics</div>
+        <div>Fashion(clothes)</div>
+        <div>shoes</div>
+        <div>Home & Kitchen</div>
+    </section>
+    <section class="featured">
+        <h2>Featured Products</h2>
+        <div>Product 1</div>
+        <div>Product 2</div>
+        <div>Product 3</div>
+    </section>
+    <footer>
+        <p>&copy; 2024 E-Commerce Platform. All rights reserved.</p>
+    </footer>
+</body>
+</html>
